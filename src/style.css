@@ -1,0 +1,236 @@
+.adminnav{
+    background-color: brown;
+    height:60px;
+  text-align: right;
+}
+
+.dropbtn {
+    background-color: brown;
+    color: white;  
+    font-size: 16px;
+    border: none;
+    padding-top: -10px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: brown;
+
+  }
+  input[type="email"],
+input[type="password"] {
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  font-size: 20;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-image: linear-gradient(to right, lightpink, lightblue);
+margin-top: -180px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -170px;
+padding: 3rem;
+  width: 400px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reg-form {
+  background-image: linear-gradient(to right, lightgray, lightpink);
+  padding: 3rem;
+  width: 600px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.image {
+  width: 281px;
+  height: 280px;
+  padding-left: -140px;
+  margin-left: 0px;
+  background-color: #c0bebe;
+}
+.images {
+  width: 276px;
+  height: 270px;
+  padding-left: -140px;
+  margin-left: 0px;
+  background-color: #c0bebe;
+  border-radius: 150px;
+}
+.div-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.div-container > .div-style {
+  flex: 1 1 20%;
+  margin: 20px;
+  height: 400px;
+}
+
+.div-style {
+  background-color: #fff;
+  border: 10px solid #c0bebe;
+  box-shadow: "1px 2px 9px #F4AAB9";
+}
+.labelname {
+  font-size: 15px;
+}
+/* }
+.app {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 1340px;
+    height: 523px;
+    padding-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: #ffffff;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    font-size: 20;
+
+  }
+
+  input[type="submit"] {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #01d28e;
+    border: 1px solid #01d28e;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+  input[type="submit"]:hover {
+    background: #6cf0c2;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+ */
+
+
+  /* .form {
+    background-image: linear-gradient(to right, lightgray, lightpink);
+    padding: 4rem;
+    width: 400px;
+    color: black;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .del-form {
+    background-image: linear-gradient(to right, lightgray, lightpink);
+    padding: 4rem;
+    width: 600px;
+    color: black;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 600px;
+  }
+  .list-container {
+    display: flex;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  } */

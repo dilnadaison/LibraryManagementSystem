@@ -1,0 +1,63 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "dob": "2022-05-04",
+      "password": "12345",
+      "email": "admin@gmail.com",
+      "address": "Kochi"
+    },
+    {
+      "name": "Raghav",
+      "email": "raghav@gmail.com",
+      "password": "12345",
+      "address": "Kozhikode",
+      "id": 3,
+      "role": "Librian"
+    }
+  ],
+  "book": [
+    {
+      "name": "Balakalasakhi",
+      "department": "Malayalam",
+      "authorname": "Basheer",
+      "publishername": "H&C Books",
+      "id": "MAL100",
+      "status": "Borrowed",
+      "issuedto": "ID1001"
+    },
+    {
+      "name": "Mathilukkal",
+      "department": "Malayalam",
+      "authorname": "Basheer",
+      "publishername": "H&C Books",
+      "id": "6o1jce4",
+      "status": "Borrowed",
+      "issuedto": "Anu Surendharan",
+      "issuedate": ""
+    }
+  ],
+  "student": [
+    {
+      "id": "ID1001",
+      "name": "Anu Surendharan",
+      "department": "Computer Application",
+      "course": "BCA",
+      "class": "Semster 2"
+    }
+  ],
+  "bookentries": [
+   
+    {
+      "authorname": "Basheer",
+      "status": "Borrowed",
+      "title": "Mathilukkal",
+      "department": "Malayalam",
+      "issuedate": "2023-02-22",
+      "returndate": "",
+      "issuedto": "Anu Surendharan",
+      "id": "6o1jce4"
+    }
+  ]
+}
