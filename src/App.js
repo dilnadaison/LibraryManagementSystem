@@ -16,6 +16,8 @@ import IssueBook from "./IssueBook";
 import IssueForm from "./IssueForm";
 import ReturnBook from "./ReturnBook";
 import ReturnForm from "./ReturnForm";
+import BookReturnEntries from "./BookReturnEntries";
+import BookList from "./BookList";
 function App() {
   return (
     <div>
@@ -37,6 +39,9 @@ function App() {
           <Route path="/IssueForm" element={<IssueForm/>}> </Route>
           <Route path="/ReturnBook" element={<ReturnBook/>}> </Route>
           <Route path="/ReturnForm" element={<ReturnForm/>}> </Route>
+          <Route path="/BookTakenList" element={<BookTakenList/>}> </Route>
+           <Route path="/BookReturnEntries" element={<BookReturnEntries/>}> </Route> 
+           <Route path="/BookList" element={<BookList/>}> </Route>
           </Routes>
       
         </div>

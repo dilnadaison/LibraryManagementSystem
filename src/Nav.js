@@ -296,7 +296,7 @@ function Nav() {
               <div className="dropdown-content">
                 <h3 style={{ textAlign: "center" }}>
                   <Link
-                    to="/Staff" onClick={() => window.location.href("/Staff")}
+                    to="/BookTakenList" onClick={() => window.location.href("/BookTakenList")}
                     style={{ textDecoration: "none", color: "black" }}
                   >
                      Book Taken Entries
@@ -305,7 +305,7 @@ function Nav() {
   
                 <h3 style={{ textAlign: "center" }}>
                   <Link
-                    to="/ViewStaff" onClick={() => window.location.href("/ViewStaff")}
+                    to="/BookReturnEntries" onClick={() => window.location.href("BookReturnEntries")}
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     Book Return Entries
@@ -313,7 +313,7 @@ function Nav() {
                 </h3>
                 <h3 style={{ textAlign: "center" }}>
                   <Link
-                    to="/ViewStaff" onClick={() => window.location.href("/ViewStaff")}
+                    to="/BookList" onClick={() => window.location.href("/BookList")}
                     style={{ textDecoration: "none", color: "black" }}
                   >
                    Book List

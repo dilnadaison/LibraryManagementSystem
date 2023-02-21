@@ -48,15 +48,14 @@
     }
   ],
   "bookentries": [
-   
     {
       "authorname": "Basheer",
-      "status": "Borrowed",
+      "status": "Returned",
       "title": "Mathilukkal",
       "department": "Malayalam",
       "issuedate": "2023-02-22",
-      "returndate": "",
-      "issuedto": "Anu Surendharan",
+      "returndate": "2023-02-24",
+      "issuedto": "",
       "id": "6o1jce4"
     }
   ]
