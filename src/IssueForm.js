@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router";
 
 function IssueForm() {
+ 
   const [items, setItems] = useState([]);
   const [date, setDate]=useState("");
   const handleChange = (event) => {
@@ -12,19 +14,20 @@ function IssueForm() {
   };
     
     
- 
-  
+
   const id = localStorage.getItem("bookID");
   const title = localStorage.getItem("bookTitle");
   const authorName = localStorage.getItem("bookAuthorName");
   const department = localStorage.getItem("bookDepartment");
-
+  const entryID = localStorage.getItem("id");
+  console.log(entryID);
   const [filterText, setFilterText] = useState("");
 
 useEffect(()=>{
   axios.get("http://localhost:3000/student").then((response) => {
         setItems(response.data);
         console.log(response.data);
+        // window.location.reload();
   });
     },[])
   const filteredItems = items.filter(
@@ -33,6 +36,41 @@ useEffect(()=>{
   
   const itemsToDisplay = filterText ? filteredItems : items;
   
+  function issueBook(name,bookID,title,department,authorname) {
+    const date = localStorage.getItem("issuedDate");
+  
+    // axios.patch(`http://localhost:3000/bookentries/${entryID}`,{
+    //     status:"Borrowed",
+    //     issuedto:name,
+    //     issuedate:date
+    //   })
+    //   .catch((error)=>
+    //   console.log(error))
+   
+      axios.post(`http://localhost:3000/bookentries`,{
+        authorname:authorname,
+        status:"Borrowed",
+        title:title,
+        department:department,
+        issuedate:date,
+        returndate:"",
+        issuedto:name,
+        bookId:bookID
+  
+      }
+      
+      )
+     return(
+      alert("Ok"),
+     Navigate("/Home")
+     );
+   
+  };
+
+
+
+
+
   return (
     <div style={{ padding: "20px 50px", backgroundColor: "lightgreen" }}>
       <div style={{ float: "right" }}>
@@ -63,7 +101,7 @@ useEffect(()=>{
             {item.id}&emsp;{item.name}
           </h3>
           <p style={{ float: "right" }}>
-            <button onClick={issueBook(item.name,id)}>Confirm</button>
+            <button onClick={()=>issueBook(item.name,id,title,department,authorName)}>Confirm</button>
           </p>
           <h4>{item.department}</h4>
 
@@ -77,14 +115,6 @@ useEffect(()=>{
     </div>
   );
 }
-function issueBook(name,bookID) {
-  const date = localStorage.getItem("issuedDate");
-  axios.patch(`http://localhost:3000/bookentries/${bookID}`,{
-      status:"Borrowed",
-      issuedto:name,
-      issuedate:date
-    })
-    .catch((error)=>
-    console.log(error))
-};
+
+
 export default IssueForm;

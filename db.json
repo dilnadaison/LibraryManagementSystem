@@ -24,8 +24,8 @@
       "authorname": "Basheer",
       "publishername": "H&C Books",
       "id": "MAL100",
-      "status": "Borrowed",
-      "issuedto": "ID1001"
+      "status": "Borrowed"
+      
     },
     {
       "name": "Mathilukkal",
@@ -33,9 +33,8 @@
       "authorname": "Basheer",
       "publishername": "H&C Books",
       "id": "6o1jce4",
-      "status": "Borrowed",
-      "issuedto": "Anu Surendharan",
-      "issuedate": ""
+      "status": "Borrowed"
+      
     }
   ],
   "student": [
@@ -55,8 +54,53 @@
       "department": "Malayalam",
       "issuedate": "2023-02-22",
       "returndate": "2023-02-24",
-      "issuedto": "",
-      "id": "6o1jce4"
+      "issuedto": "Anu Surendharan",
+      "bookId": "6o1jce4",
+      "id": "HP26ZmM"
+    },
+    {
+      "authorname": "Basheer",
+      "status": "Borrowed",
+      "title": "Mathilukkal",
+      "department": "Malayalam",
+      "issuedate": "2023-02-22",
+      "returndate": "",
+      "issuedto": "Anu Surendharan",
+      "bookId": "6o1jce4",
+      "id": "Mku4ZHl"
+    },
+    {
+      "authorname": "Basheer",
+      "status": "Borrowed",
+      "title": "Mathilukkal",
+      "department": "Malayalam",
+      "issuedate": "2023-02-22",
+      "returndate": "",
+      "issuedto": "Anu Surendharan",
+      "bookId": "6o1jce4",
+      "id": "3LyeBqL"
+    },
+    {
+      "authorname": "Basheer",
+      "status": "Borrowed",
+      "title": "Mathilukkal",
+      "department": "Malayalam",
+      "issuedate": "2023-02-22",
+      "returndate": "",
+      "issuedto": "Anu Surendharan",
+      "bookId": "6o1jce4",
+      "id": "4seejCT"
+    },
+    {
+      "authorname": "Basheer",
+      "status": "Borrowed",
+      "title": "Mathilukkal",
+      "department": "Malayalam",
+      "issuedate": "2023-02-22",
+      "returndate": "",
+      "issuedto": "Anu Surendharan",
+      "bookId": "6o1jce4",
+      "id": "Y5sdHrd"
     }
   ]
 }

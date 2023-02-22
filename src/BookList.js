@@ -18,6 +18,7 @@ function BookList() {
     const value = event.target.value;
 
     localStorage.setItem("filterData", value);
+    window.location.reload()
   };
 
   //   function returnBook(id, name, authorname, department) {
@@ -31,13 +32,14 @@ function BookList() {
   //     // window.location.href("/IssueForm");
   //   }
   const [filterText, setFilterText] = useState("");
-
+  const data=localStorage.getItem("filterData");
+  console.log(data);
   const filteredItems = items.filter(
     (item) =>
-      (item.title === filterText || item.id === filterText) &&
-      item.status === "Borrowed"
+      (item.title === filterText || item.id === filterText ||
+      item.department ===filterText) 
   );
-const data=localStorage.getItem("filterData");
+
   const itemsToDisplay = filterText ? filteredItems : items;
 
   return (
@@ -49,17 +51,17 @@ const data=localStorage.getItem("filterData");
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
       />
-      <select name="dept" onChange={handleChange}>
-        <option selected>Select</option>
+      {/* <select name="dept" onChange={handleChange} value={data}>
+        <option value="select" >Select</option>
         <option value="Malayalam">Malayalam</option>
         <option value="Computer Application">Computer Application</option>
-      </select>
+      </select> */}
       <hr />
       {!filteredItems.length && (
         <div>There are no items to display adjust your filter criteria</div>
       )}
 
-      {itemsToDisplay.map((item) => (
+      {itemsToDisplay.map((item) =>{ return(
         <div key={item.id}>
           {/* <p style={{float:"right"}}> <h4>Department {item.department}</h4>
                 <h4>
@@ -76,7 +78,8 @@ const data=localStorage.getItem("filterData");
 
           <hr />
         </div>
-      ))}
+     
+    )})}
     </div>
   );
 }

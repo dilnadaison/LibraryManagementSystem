@@ -102,7 +102,6 @@ function returnBook(bookID) {
   axios
     .patch(`http://localhost:3000/bookentries/${bookID}`, {
       status: "Returned",
-      issuedto: "",
       returndate: date,
     })
     .catch((error) => console.log(error));

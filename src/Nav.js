@@ -53,7 +53,7 @@ function Nav() {
     return (
       <div>
         <nav className="adminnav">
-          <button className="dropbtn">
+          {/* <button className="dropbtn">
             <h1
               style={{
                 float: "right",
@@ -66,7 +66,7 @@ function Nav() {
             >
               Logout
             </h1>
-          </button>
+          </button> */}
           &emsp;&emsp;
           <div className="dropdown">
             <button className="dropbtn">
@@ -165,10 +165,10 @@ function Nav() {
             <div className="dropdown-content">
               <h3 style={{ textAlign: "center", color: "black" }}>
                 <Link
-                  to="Login"
-                  style={{ textDecoration: "none", color: "black" }}
+                  to="Home"
+                  style={{ textDecoration: "none", color: "black" }} onClick={()=>logouts()}
                 >
-                  {state.log}
+                  Logout
                 </Link>
               </h3>
             </div>
@@ -181,7 +181,7 @@ function Nav() {
     return (
         <div>
           <nav className="adminnav">
-            <button className="dropbtn">
+            {/* <button className="dropbtn">
               <h1
                 style={{
                   float: "right",
@@ -194,7 +194,7 @@ function Nav() {
               >
                 Logout
               </h1>
-            </button>
+            </button> */}
             &emsp;&emsp;
             <button className="dropbtn">
               <h1
@@ -340,10 +340,10 @@ function Nav() {
               <div className="dropdown-content">
                 <h3 style={{ textAlign: "center", color: "black" }}>
                   <Link
-                    to="Login"
-                    style={{ textDecoration: "none", color: "black" }}
+                    to="Home"
+                    style={{ textDecoration: "none", color: "black" }} onClick={()=>logouts()}
                   >
-                    {state.log}
+                    Logout
                   </Link>
                 </h3>
               </div>

@@ -1,23 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Nav from "./Nav";
+import Nav from "./nav";
 import "./style.css";
 
-import Login from "./Login";
-import Home from "./Home";
-import Books from "./Book";
-import Staff from "./Staff";
+import Login from "./login";
+import Home from "./home";
+import Books from "./book";
+import Staff from "./staff";
 import ViewStaff from "./ViewStaff";
 import ViewBook from "./ViewBook";
-import BookTakenList from "./BookTakenList";
-import StudentList from "./StudentList";
+import BookTakenList from "./bookTakenList";
+import StudentList from "./studentList";
 import ViewStudentList from "./ViewStudentList";
-import IssueBook from "./IssueBook";
-import IssueForm from "./IssueForm";
-import ReturnBook from "./ReturnBook";
-import ReturnForm from "./ReturnForm";
-import BookReturnEntries from "./BookReturnEntries";
-import BookList from "./BookList";
+import IssueBook from "./issueBook";
+import IssueForm from "./issueForm";
+import ReturnBook from "./returnBook";
+import BookReturnEntries from "./bookReturnList";
+import BookList from "./bookList";
 function App() {
   return (
     <div>
@@ -38,7 +37,6 @@ function App() {
           <Route path="/IssueBook" element={<IssueBook/>}> </Route>
           <Route path="/IssueForm" element={<IssueForm/>}> </Route>
           <Route path="/ReturnBook" element={<ReturnBook/>}> </Route>
-          <Route path="/ReturnForm" element={<ReturnForm/>}> </Route>
           <Route path="/BookTakenList" element={<BookTakenList/>}> </Route>
            <Route path="/BookReturnEntries" element={<BookReturnEntries/>}> </Route> 
            <Route path="/BookList" element={<BookList/>}> </Route>
