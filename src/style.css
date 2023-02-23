@@ -114,6 +114,7 @@ padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-left: 70px;
 }
 
 .image {
@@ -153,7 +154,7 @@ padding: 3rem;
 }
 .form {
   background-image: linear-gradient(to right, lightpink, lightblue);
-margin-top: -180px;
+margin-top: -256px;
 margin-left: auto;
 margin-right: auto;
 margin-bottom: -170px;
@@ -167,86 +168,64 @@ padding: 3rem;
   width: 200px;
   height: 28px;;
 }
-/* }
-.app {
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    width: 1340px;
-    height: 523px;
-    padding-top: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: #ffffff;
-  }
-
-  input[type="email"],
-  input[type="password"],
-  input[type="text"] {
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    font-size: 20;
-
-  }
-
-  input[type="submit"] {
+.issue{
+  
     margin-top: 10px;
     cursor: pointer;
     font-size: 15px;
-    background: #01d28e;
-    border: 1px solid #01d28e;
+    background: #07721ede;
+    border: 1px solid #07721ede;
     color: #fff;
     padding: 10px 20px;
-  }
+    border-radius: 10px;
+  
+}
+.return{
+  
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #0748fade;
+  border: 1px solid #0748fade;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
 
-  input[type="submit"]:hover {
-    background: #6cf0c2;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-  }
- */
-
-
-  /* .form {
-    background-image: linear-gradient(to right, lightgray, lightpink);
-    padding: 4rem;
-    width: 400px;
-    color: black;
-    margin-top: 40px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .del-form {
-    background-image: linear-gradient(to right, lightgray, lightpink);
-    padding: 4rem;
-    width: 600px;
-    color: black;
-    margin-top: 40px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 600px;
-  }
-  .list-container {
-    display: flex;
-  }
-
-  .error {
-    color: red;
-    font-size: 12px;
-  }
-
-  .title {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 10px;
-  } */
+}
+.enrollform {
+  background-image: linear-gradient(to right,lightblue, lightpink);
+  padding: 3rem;
+  width: 500px;
+  color: black;
+  margin-top: -256px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -170px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+.input{
+  width:300px;
+}
+.viewstudent{
+  background-color: white;
+  border-color: bisque;
+  width:650px;
+ 
+}
+.table {
+  background-image: linear-gradient(to right, lightpink, lightblue);
+margin-top: -256px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -170px;
+padding: 3rem;
+  width: 700px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+td,th{
+  padding: 12px;
+  
+}

@@ -29,7 +29,7 @@ function ViewStudentList() {
               <td>{data.department}</td>
               <td>{data.course}</td>
               <td>{data.class}</td>
-              <td><i class="fa-solid fa-trash" onClick={() =>dataRemove(data.id)}></i></td>
+              <td><i class="fa-solid fa-circle-xmark" onClick={() =>dataRemove(data.id)} style={{color:"red",fontSize:20}}></i></td>
             </tr>
           );
         })
@@ -38,17 +38,17 @@ function ViewStudentList() {
    
     return (
       
-      <div>
-        <div className="reg-form">
+      
+        <div className="table">
           <h2>
             <center>
               <b>View Student Here!</b>
             </center>
-          </h2>
-          <table border={2} align="center">
-            <thead>
-              <tr>
-              <th>ID</th>
+          </h2><br></br>
+          <table className="viewstudent" border={2} align="center" cellPadding="65" cellSpacing="30">
+            <thead >
+              <tr >
+              <th >ID</th>
               <th>Name</th>
               <th>Department</th>
               <th>Course</th>
@@ -63,7 +63,7 @@ function ViewStudentList() {
             </tbody>
           </table>
         </div>
-      </div>
+     
     );
 }
 

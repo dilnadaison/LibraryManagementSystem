@@ -43,9 +43,10 @@ function BookTakenList() {
     const itemsToDisplay = filterText ? filteredItems : items;
   
     return (
-      <div style={{ padding: "20px 20px", backgroundColor: "lightgreen" }}>
-        <h1>Search Page</h1>
+      <div className='form'>
+        <h1>Book Taken Entries</h1>
         <input
+        className='filter'
           type="text"
           placeholder="Filter items by keyword"
           value={filterText}
@@ -58,9 +59,9 @@ function BookTakenList() {
   
         {itemsToDisplay.map((item) => {
           return item.status === "Borrowed" ? (
-            <div key={item.title}>
+            <div key={item.title} >
               <h3>
-                {item.id}&emsp;{item.title}
+                {item.bookId}&emsp;{item.title}
               </h3>
               {/* <p style={{ float: "right" }}>
                 <button

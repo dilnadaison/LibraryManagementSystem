@@ -43,9 +43,9 @@ function ReturnBook() {
   const itemsToDisplay = filterText ? filteredItems : items;
 
   return (
-    <div style={{ padding: "20px 50px", backgroundColor: "lightgreen" }}>
-      <h1>Search Page</h1>
-      <input
+    <div className="form">
+      <h1>Return Book Here!</h1>
+      <input className="filter"
         type="text"
         placeholder="Filter items by keyword"
         value={filterText}
@@ -63,7 +63,8 @@ function ReturnBook() {
               {item.id}&emsp;{item.title}
             </h3>
             <p style={{ float: "right" }}>
-              <button
+              <button  
+              className="return"
                 type="submit"
                 onClick={() =>
                   returnBook(

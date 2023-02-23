@@ -72,7 +72,7 @@ useEffect(()=>{
 
 
   return (
-    <div style={{ padding: "20px 50px", backgroundColor: "lightgreen" }}>
+    <div className="form">
       <div style={{ float: "right" }}>
         <h4>
           {id}-{title}
@@ -81,9 +81,9 @@ useEffect(()=>{
           {authorName}&emsp;{department}
         </h4>
       </div>
-      <h1>Search Page</h1>
+      <h1>Issue Book Here!</h1>
 
-      <input
+      <input className="filter"
         type="text"
         placeholder="Filter items by keyword"
         value={filterText}
@@ -101,7 +101,7 @@ useEffect(()=>{
             {item.id}&emsp;{item.name}
           </h3>
           <p style={{ float: "right" }}>
-            <button onClick={()=>issueBook(item.name,id,title,department,authorName)}>Confirm</button>
+            <button className="issue" onClick={()=>issueBook(item.name,id,title,department,authorName)}>Confirm</button>
           </p>
           <h4>{item.department}</h4>
 

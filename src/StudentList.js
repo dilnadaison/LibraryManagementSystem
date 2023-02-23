@@ -49,19 +49,21 @@ function StudentList() {
         });
     };
     return (
-      <div className="app">
-        <div className="reg-form">
+      
+        <div className="enrollform">
+         
+          <form  onSubmit={gotoLogin}>
           <h2>
             <center>
-              <b>Register Here!</b>
+              <b>Enroll Student Here!</b>
             </center>
-          </h2>
-          <form className="form" onSubmit={gotoLogin}>
+          </h2><br></br>
           <div className="input-container">
               <label className="labelname">
-                <strong>ID</strong>
+                <strong>ID </strong>
               </label>
               <input
+              className='input'
                 style={{ fontSize: 15 }}
                 required
                 type="text"
@@ -71,17 +73,18 @@ function StudentList() {
               />
             </div>
             <div className="input-container">
-              <label className="labelname">
-                <strong>Name</strong>
+               <label className="labelname">
+                <strong>Full Name</strong>
               </label>
               <input
+              className='input'
                 style={{ fontSize: 15 }}
                 required
                 type="text"
                 name="name"
                 pattern="[A-Za-z\s]{2,32}"
-                onChange={handleChange}
-              />
+                onChange={handleChange}/>
+              
             </div>
   
             <div className="input-container">
@@ -89,10 +92,12 @@ function StudentList() {
                 <strong>Department</strong>
               </label>
               <input
+              className='input'
                 style={{ fontSize: 15 }}
                 required
                 type="text"
                 name="department"
+                pattern="[A-Za-z\s]{2,32}"
                 onChange={handleChange}
               />
             </div>
@@ -101,10 +106,12 @@ function StudentList() {
                 <strong>Course</strong>
               </label>
               <input
+              className='input'
                 style={{ fontSize: 15 }}
                 required
                 type="text"
                 name="course"
+                pattern="[A-Za-z\s]{2,20}"
                 onChange={handleChange}
               />
             </div>
@@ -113,10 +120,12 @@ function StudentList() {
                 <strong>Class</strong>
               </label>
               <input
+              className='input'
                 style={{ fontSize: 15 }}
                 required
                 type="text"
                 name="class"
+                pattern="[A-Za-z0-9\s]{2,32}"
                 onChange={handleChange}
               />
             </div>
@@ -161,7 +170,7 @@ function StudentList() {
             </div>
           </form>
         </div>
-      </div>
+    
     );
 }
 

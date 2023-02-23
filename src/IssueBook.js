@@ -97,7 +97,7 @@ export default function IssueBook() {
             {item.id}&emsp;{item.name}
           </h3>
           <p style={{ float: "right" }}>
-            <button
+            <button className="issue"
               type="submit"
               onClick={() =>
                 issueBook(item.id, item.name, item.authorname, item.department)

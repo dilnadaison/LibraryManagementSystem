@@ -43,9 +43,10 @@ function BookList() {
   const itemsToDisplay = filterText ? filteredItems : items;
 
   return (
-    <div style={{ padding: "20px 50px", backgroundColor: "lightgreen" }}>
-      <h1>Search Page</h1>
+    <div className="form">
+      <h1>Book List</h1>
       <input
+      className="filter"
         type="text"
         placeholder="Filter items by keyword"
         value={filterText}
