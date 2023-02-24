@@ -9,12 +9,13 @@
       "address": "Kochi"
     },
     {
-      "name": "Raghav",
-      "email": "raghav@gmail.com",
+      "name": "Jees",
+      "email": "jees@gmail.com",
+      "address": "Porthur House,Kunnamkulam",
+      "phone": "9087675642",
       "password": "12345",
-      "address": "Kozhikode",
-      "id": 3,
-      "role": "Librian"
+      "role": "Librian",
+      "id": 2
     }
   ],
   "book": [
@@ -24,8 +25,8 @@
       "authorname": "Basheer",
       "publishername": "H&C Books",
       "id": "MAL100",
-      "status": "Borrowed"
-      
+      "status": "Borrowed",
+      "returndate": "2023-02-28"
     },
     {
       "name": "Mathilukkal",
@@ -33,8 +34,41 @@
       "authorname": "Basheer",
       "publishername": "H&C Books",
       "id": "6o1jce4",
-      "status": "Borrowed"
-      
+      "status": "New One"
+    },
+    {
+      "status": "New One",
+      "name": "Adujeevitham",
+      "department": "Malayalam",
+      "authorname": "Benyamin",
+      "publishername": "DC Books",
+      "id": "ctyEm1R"
+    },
+    {
+      "name": "Forensic Science in Crime Investigation",
+      "department": "Forensic Science",
+      "status": "New One",
+      "authorname": "B S Nabar",
+      "publishername": "Asia Law House",
+      "id": "Z96sbcF",
+      "returndate": "2023-02-28"
+    },
+    {
+      "name": "B.A Development Economics ",
+      "department": "Economics",
+      "status": "Returned",
+      "authorname": "Telugu Academy",
+      "publishername": "Telugu Akademi",
+      "id": "Jsq5G2P",
+      "returndate": "2023-02-28"
+    },
+    {
+      "name": "Physics For Degree Students B.sc. 3rd Year",
+      "authorname": "Arora C.L. , Hemne P.S.",
+      "publishername": "S Chand & Company",
+      "department": "Physics",
+      "status": "New One",
+      "id": "AyE9Pym"
     }
   ],
   "student": [
@@ -44,6 +78,27 @@
       "department": "Computer Application",
       "course": "BCA",
       "class": "Semster 2"
+    },
+    {
+      "id": "ID1002",
+      "name": "Uthama",
+      "department": "English",
+      "course": "BA English",
+      "class": "Semster IV"
+    },
+    {
+      "id": "ID1003",
+      "name": "Tom Saju",
+      "department": "Economics",
+      "course": "BA Economics",
+      "class": "Semster VI"
+    },
+    {
+      "id": "ID1004",
+      "name": "Jisna Hino",
+      "department": "Forensic Science",
+      "course": "Bsc Forensic Science",
+      "class": "Semster II"
     }
   ],
   "bookentries": [
@@ -60,47 +115,25 @@
     },
     {
       "authorname": "Basheer",
-      "status": "Borrowed",
-      "title": "Mathilukkal",
+      "title": "Balakalasakhi",
       "department": "Malayalam",
-      "issuedate": "2023-02-22",
+      "issuedate": "2023-02-24",
       "returndate": "",
+      "status": "Borrowed",
       "issuedto": "Anu Surendharan",
-      "bookId": "6o1jce4",
-      "id": "Mku4ZHl"
+      "bookId": "MAL100",
+      "id": "jtcdtx2"
     },
     {
-      "authorname": "Basheer",
-      "status": "Borrowed",
-      "title": "Mathilukkal",
-      "department": "Malayalam",
-      "issuedate": "2023-02-22",
-      "returndate": "",
-      "issuedto": "Anu Surendharan",
-      "bookId": "6o1jce4",
-      "id": "3LyeBqL"
-    },
-    {
-      "authorname": "Basheer",
-      "status": "Borrowed",
-      "title": "Mathilukkal",
-      "department": "Malayalam",
-      "issuedate": "2023-02-22",
-      "returndate": "",
-      "issuedto": "Anu Surendharan",
-      "bookId": "6o1jce4",
-      "id": "4seejCT"
-    },
-    {
-      "authorname": "Basheer",
-      "status": "Borrowed",
-      "title": "Mathilukkal",
-      "department": "Malayalam",
-      "issuedate": "2023-02-22",
-      "returndate": "",
-      "issuedto": "Anu Surendharan",
-      "bookId": "6o1jce4",
-      "id": "Y5sdHrd"
+      "authorname": "Telugu Academy",
+      "title": "B.A Development Economics ",
+      "department": "Economics",
+      "issuedate": "2023-02-24",
+      "returndate": "2023-02-28",
+      "status": "Returned",
+      "issuedto": "Tom Saju",
+      "bookId": "Jsq5G2P",
+      "id": "Z4jKgRi"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
+import image from "./images/logo.png"
 function Nav() {
   const [state, setstate] = useState({
     log: "Logout",
@@ -67,6 +68,9 @@ function Nav() {
               Logout
             </h1>
           </button> */}
+           <img alt=" " className="logo" src={image}>
+              </img>
+            
           &emsp;&emsp;
           <div className="dropdown">
             <button className="dropbtn">
@@ -101,14 +105,7 @@ function Nav() {
                 </Link>
               </h3>
 
-              <h3 style={{ textAlign: "center" }}>
-                <Link
-                  to="/BookTakenList" onClick={() => window.location.href("/BookTakenList")}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Sample
-                </Link>
-              </h3>
+           
             </div>
           </div>
           &emsp;&emsp;
@@ -181,6 +178,8 @@ function Nav() {
     return (
         <div>
           <nav className="adminnav">
+          <img alt=" " className="logo" src={image}>
+              </img>
             {/* <button className="dropbtn">
               <h1
                 style={{
@@ -357,7 +356,9 @@ function Nav() {
     return (
       <div>
         <nav className="adminnav">
-          <button className="dropbtn">
+        <img alt=" " className="logo" src={image}>
+              </img>
+          {/* <button className="dropbtn">
             <h1
               style={{
                 float: "right",
@@ -370,7 +371,7 @@ function Nav() {
             >
               Logout
             </h1>
-          </button>
+          </button> */}
           &emsp;&emsp;
           <div className="dropdown">
             <button className="dropbtn">

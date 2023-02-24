@@ -1,20 +1,17 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router";
+import {  useNavigate } from "react-router";
 
 function IssueForm() {
- 
   const [items, setItems] = useState([]);
-  const [date, setDate]=useState("");
+  const [date, setDate] = useState("");
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setDate((values) => ({ ...values, [name]: value }));
-    localStorage.setItem("issuedDate",value)
+    localStorage.setItem("issuedDate", value);
   };
-    
-    
-
+const Navigate=useNavigate();
   const id = localStorage.getItem("bookID");
   const title = localStorage.getItem("bookTitle");
   const authorName = localStorage.getItem("bookAuthorName");
@@ -23,22 +20,22 @@ function IssueForm() {
   console.log(entryID);
   const [filterText, setFilterText] = useState("");
 
-useEffect(()=>{
-  axios.get("http://localhost:3000/student").then((response) => {
-        setItems(response.data);
-        console.log(response.data);
-        // window.location.reload();
-  });
-    },[])
+  useEffect(() => {
+    axios.get("http://localhost:3000/student").then((response) => {
+      setItems(response.data);
+      console.log(response.data);
+      // window.location.reload();
+    });
+  }, []);
   const filteredItems = items.filter(
     (item) => item.name === filterText || item.id === filterText
   );
-  
+
   const itemsToDisplay = filterText ? filteredItems : items;
-  
-  function issueBook(name,bookID,title,department,authorname) {
+
+  function issueBook(name, bookID, title, department, authorname) {
     const date = localStorage.getItem("issuedDate");
-  
+
     // axios.patch(`http://localhost:3000/bookentries/${entryID}`,{
     //     status:"Borrowed",
     //     issuedto:name,
@@ -46,31 +43,29 @@ useEffect(()=>{
     //   })
     //   .catch((error)=>
     //   console.log(error))
+
+    axios.post(`http://localhost:3000/bookentries`, {
+      authorname: authorname,
+      title: title,
+      department: department,
+      issuedate: date,
+      returndate: "",
+      status:"Borrowed",
+      issuedto: name,
+      bookId: bookID,
+    })
+    axios.patch(`http://localhost:3000/book/${bookID}`, {
+      status: "Borrowed",
+    });
    
-      axios.post(`http://localhost:3000/bookentries`,{
-        authorname:authorname,
-        status:"Borrowed",
-        title:title,
-        department:department,
-        issuedate:date,
-        returndate:"",
-        issuedto:name,
-        bookId:bookID
-  
-      }
-      
-      )
-     return(
-      alert("Ok"),
-     Navigate("/Home")
-     );
-   
-  };
-
-
-
-
-
+  gotoHome();
+     
+  }
+function gotoHome(){
+  alert("Successfully Issued Book!!!")
+  Navigate("/Home")
+  window.location.reload();
+}
   return (
     <div className="form">
       <div style={{ float: "right" }}>
@@ -83,7 +78,8 @@ useEffect(()=>{
       </div>
       <h1>Issue Book Here!</h1>
 
-      <input className="filter"
+      <input
+        className="filter"
         type="text"
         placeholder="Filter items by keyword"
         value={filterText}
@@ -101,20 +97,33 @@ useEffect(()=>{
             {item.id}&emsp;{item.name}
           </h3>
           <p style={{ float: "right" }}>
-            <button className="issue" onClick={()=>issueBook(item.name,id,title,department,authorName)}>Confirm</button>
+            <button
+              className="issue"
+              onClick={() =>
+                issueBook(item.name, id, title, department, authorName)
+              }
+            >
+              Confirm
+            </button>
           </p>
           <h4>{item.department}</h4>
 
           <h4>
             {item.course}&emsp;{item.class}
           </h4>
-          <h4>Issue date : <input type="date" name="issueddate" onChange={handleChange}></input></h4>
+          <h4>
+            Issue date :{" "}
+            <input
+              type="date"
+              name="issueddate"
+              onChange={handleChange}
+            ></input>
+          </h4>
           <hr />
         </div>
       ))}
     </div>
   );
 }
-
 
 export default IssueForm;

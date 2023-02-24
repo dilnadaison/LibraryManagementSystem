@@ -91,7 +91,7 @@ export default function IssueBook() {
         <div>There are no items to display adjust your filter criteria</div>
       )}
 
-      {itemsToDisplay.map((item) => (
+      {itemsToDisplay.map((item) =>{ return item.status!=="Borrowed"?(
         <div key={item.name}>
           <h3>
             {item.id}&emsp;{item.name}
@@ -113,7 +113,7 @@ export default function IssueBook() {
           </h4>
           <hr />
         </div>
-      ))}
+      ):""})}
     </div>
   );
 }

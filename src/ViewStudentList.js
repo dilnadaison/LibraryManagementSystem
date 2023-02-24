@@ -5,12 +5,12 @@ function ViewStudentList() {
     const [state, setState] = useState([]);
     const [data, setData] = useState();
     function dataRemove(id){
-    
+      if(window.confirm("Are you sure want to delete ?")){
         axios.delete(`http://localhost:3000/student/${id}`).then((response)=>{
         }).catch((error)=>
         console.log(error))
         window.location.reload()
-      
+      }
       }
     useEffect(() => {
       axios.get("http://localhost:3000/student").then((response) => {
@@ -23,13 +23,13 @@ function ViewStudentList() {
       setData(
         state.map((data) => {
           return (
-            <tr>
+            <tr key={data.id}>
               <td>{data.id}</td>
               <td>{data.name}</td>
               <td>{data.department}</td>
               <td>{data.course}</td>
               <td>{data.class}</td>
-              <td><i class="fa-solid fa-circle-xmark" onClick={() =>dataRemove(data.id)} style={{color:"red",fontSize:20}}></i></td>
+              <td><i className="fa-solid fa-circle-xmark" onClick={() =>dataRemove(data.id)} style={{color:"red",fontSize:20}}></i></td>
             </tr>
           );
         })
@@ -45,7 +45,7 @@ function ViewStudentList() {
               <b>View Student Here!</b>
             </center>
           </h2><br></br>
-          <table className="viewstudent" border={2} align="center" cellPadding="65" cellSpacing="30">
+          <table className="viewtable" border={2} align="center" >
             <thead >
               <tr >
               <th >ID</th>

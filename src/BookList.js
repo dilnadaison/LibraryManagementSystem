@@ -36,7 +36,7 @@ function BookList() {
   console.log(data);
   const filteredItems = items.filter(
     (item) =>
-      (item.title === filterText || item.id === filterText ||
+      (item.name === filterText || item.id === filterText ||
       item.department ===filterText) 
   );
 

@@ -54,15 +54,18 @@ export default function Books() {
     
 }
 return (
-    <div className="app">
-      <div className="reg-form">
-        <h2><center><b>Add Book Here!</b></center></h2>
-        <form className="form" onSubmit={gotoHomes}>
+    <div >
+      <div className="enrollform">
+        
+        <form  onSubmit={gotoHomes}>
+        <h2><center><b>Add Book Here!</b></center></h2><br></br>
+
           <div className="input-container">
             <label className="labelname">
               <strong>Book Name</strong>
             </label>
             <input style={{fontSize:15}}
+             className='input'
               required
               type="text"
               name="name"
@@ -78,6 +81,7 @@ return (
               <strong>Department</strong>
             </label>
             <input style={{fontSize:15}}
+             className='input'
               required
               type="text"
               name="department"
@@ -93,6 +97,7 @@ return (
               <strong>Author Name</strong>
             </label>
             <input style={{fontSize:15}}
+             className='input'
               required
               type="text"
               name="authorname"
@@ -102,12 +107,13 @@ return (
 
           
           </div>
-
+          
           <div className="input-container">
             <label className="labelname">
               <strong>Publisher Name</strong>
             </label>
             <input style={{fontSize:15}}
+             className='input'
               required
               type="text"
               name="publishername"
@@ -117,6 +123,21 @@ return (
 
           
           </div>
+          <div className="input-container">
+            <label className="labelname">
+              <strong>Status</strong>
+            </label>
+            <input
+              style={{ fontSize: 15 }}
+              required
+              type="text"
+              className='input'
+              name="status"
+              value='New One' 
+              onMouseOver={handleChange} disabled
+            />
+            </div>
+         
           {/* <div className="input-container">
             <label className="labelname">
               <strong>DOB</strong>

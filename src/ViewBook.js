@@ -5,12 +5,12 @@ export default function ViewBook() {
   const [state, setState] = useState([]);
   const [data, setData] = useState();
   function dataRemove(id){
-  
+    if(window.confirm("Are you sure want to delete ?")){
     axios.delete(`http://localhost:3000/user/${id}`).then((response)=>{
     }).catch((error)=>
     console.log(error))
     window.location.reload()
-  
+  }
   }
   useEffect(() => {
     axios.get("http://localhost:3000/book").then((response) => {
@@ -27,7 +27,7 @@ export default function ViewBook() {
             <td>{data.department}</td>
             <td>{data.authorname}</td>
             <td>{data.publishername}</td>
-            <td><i class="fa-solid fa-trash" onClick={() =>dataRemove(data.id)}></i></td>
+            <td><i class="fa-solid fa-circle-xmark" onClick={() =>dataRemove(data.id)} style={{color:"red",fontSize:20}}></i></td>
           </tr>
         );
       })
@@ -36,13 +36,13 @@ export default function ViewBook() {
 
   return (
     <div>
-      <div className="reg-form">
+      <div className="table">
         <h2>
           <center>
             <b>View Book Here!</b>
           </center>
         </h2>
-        <table border={2} align="center">
+        <table className="viewtable" border={2} align="center">
           <thead>
             <tr>
               <th>Name</th>

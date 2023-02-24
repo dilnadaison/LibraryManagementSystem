@@ -67,7 +67,7 @@ localStorage.setItem('loggedin', false);
     
               
               
-              })
+              },[])
   const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
@@ -114,19 +114,19 @@ localStorage.setItem('loggedin', false);
 
   // JSX code for login form
   const renderForm = (
-    <div className="form">
+    <div >
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
+        <div className="logininput">
           <label className="labelname">Email </label>
           <input style={{fontSize:15}} type="email" name="email" required />
           {renderErrorMessage("email")}
         </div>
-        <div className="input-container">
+        <div className="logininput">
           <label className="labelname">Password </label>
           <input style={{fontSize:15}} type="password" name="password" required />
           {renderErrorMessage("password")}
         </div>
-        <label className="labelname">Don't have an account?<Link to="/Forms" style={{color:"darkblue"}}>Register Here</Link> </label>
+        
         <div className="button-container">
           <input type="submit" value="Submit"/>
         </div>
@@ -135,8 +135,8 @@ localStorage.setItem('loggedin', false);
   );
 
   return (
-    <div className="app">
-      <div className="login-form">
+    <div >
+      <div className="login">
         <div className="title"><center>Sign In</center></div>
         {isSubmitted ? '': renderForm }
        

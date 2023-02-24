@@ -2,6 +2,7 @@
     background-color: brown;
     height:60px;
   text-align: right;
+  padding-right: 30px;
 }
 
 .dropbtn {
@@ -116,7 +117,12 @@ padding: 3rem;
   gap: 8px;
   margin-left: 70px;
 }
-
+.logininput {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 0px;
+}
 .image {
   width: 281px;
   height: 280px;
@@ -160,6 +166,17 @@ margin-right: auto;
 margin-bottom: -170px;
 padding: 3rem;
   width: 700px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login {
+  background-image: linear-gradient(to right, lightpink, lightblue);
+margin-top: -256px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -170px;
+padding: 3rem;
+  width: 580px;
   color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -207,7 +224,7 @@ margin-bottom: -170px;
 .input{
   width:300px;
 }
-.viewstudent{
+.viewtable{
   background-color: white;
   border-color: bisque;
   width:650px;
@@ -228,4 +245,11 @@ padding: 3rem;
 td,th{
   padding: 12px;
   
+}
+.logo{
+  width:365px;
+  height:46px;
+  padding-top:16px;
+  padding-left: 10px;
+  float: left;
 }

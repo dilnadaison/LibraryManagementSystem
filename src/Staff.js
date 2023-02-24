@@ -24,7 +24,7 @@ export default function Staff() {
   //      alert("Product will be delivered to you");
   //   Navigate("/Homes");
   // }
-  function gotoLogin() {
+  function gotoPage() {
     if (localStorage.getItem("loggedin") === "true") {
       setValue(true);
       alreadyPesent();
@@ -50,14 +50,15 @@ export default function Staff() {
       });
   };
   return (
-    <div className="app">
-      <div className="reg-form">
+    
+      <div className="enrollform">
+        
+        <form onSubmit={gotoPage}>
         <h2>
           <center>
             <b>Register Here!</b>
           </center>
         </h2>
-        <form className="form" onSubmit={gotoLogin}>
           <div className="input-container">
             <label className="labelname">
               <strong>Name</strong>
@@ -65,6 +66,7 @@ export default function Staff() {
             <input
               style={{ fontSize: 15 }}
               required
+              className='input'
               type="text"
               name="name"
               pattern="[A-Za-z\s]{2,32}"
@@ -79,6 +81,7 @@ export default function Staff() {
             <input
               style={{ fontSize: 15 }}
               required
+              className='input'
               type="email"
               name="email"
               onChange={handleChange}
@@ -92,6 +95,7 @@ export default function Staff() {
             <input
               style={{ fontSize: 15 }}
               required
+              className='input'
               type="password"
               name="password"
               onChange={handleChange}
@@ -126,8 +130,23 @@ export default function Staff() {
             <input
               style={{ fontSize: 15 }}
               required
+              className='input'
               type="text"
               name="address"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-container">
+            <label className="labelname">
+              <strong>Mobile Number</strong>
+            </label>
+            <input
+              style={{ fontSize: 15 }}
+              required
+              pattern="[6-9]{1}[0-9]{9}"
+              className='input'
+              type="text"
+              name="phone"
               onChange={handleChange}
             />
           </div>
@@ -140,6 +159,7 @@ export default function Staff() {
               style={{ fontSize: 15 }}
               required
               type="text"
+              className='input'
               name="role"
               value='Librian' 
               onMouseOver={handleChange} disabled
@@ -161,6 +181,6 @@ export default function Staff() {
           </div>
         </form>
       </div>
-    </div>
+  
   );
 }
