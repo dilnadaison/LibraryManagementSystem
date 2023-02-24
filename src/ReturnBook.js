@@ -40,7 +40,7 @@ const Navigate = useNavigate();
       item.status === "Borrowed"
   );
   function gotoHome(){
-    alert("Successfully Issued Book!!!")
+    alert("Successfully Returned Book!!!")
     Navigate("/Home")
     window.location.reload();
   }
