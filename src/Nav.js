@@ -68,9 +68,13 @@ function Nav() {
               Logout
             </h1>
           </button> */}
+           <Link
+                  to="Home" onClick={()=>window.location.href("/Home")}
+            
+                >
            <img alt=" " className="logo" src={image}>
               </img>
-            
+              </Link>
           &emsp;&emsp;
           <div className="dropdown">
             <button className="dropbtn">
@@ -178,8 +182,13 @@ function Nav() {
     return (
         <div>
           <nav className="adminnav">
+          <Link
+                  to="Home"
+                  onClick={()=>window.location.href("/Home")}
+                >
           <img alt=" " className="logo" src={image}>
               </img>
+              </Link>
             {/* <button className="dropbtn">
               <h1
                 style={{
@@ -356,8 +365,13 @@ function Nav() {
     return (
       <div>
         <nav className="adminnav">
+        <Link
+                  to="Home"
+                  onClick={()=>window.location.href("/Home")}
+                >
         <img alt=" " className="logo" src={image}>
               </img>
+              </Link>
           {/* <button className="dropbtn">
             <h1
               style={{
