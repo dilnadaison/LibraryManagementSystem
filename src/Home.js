@@ -12,7 +12,7 @@ function Home() {
       height: 255,
       marginLeft: -310,
       marginRight: "auto",
-      marginTop:-230
+      marginTop:-300
      
       
     }}
@@ -41,7 +41,7 @@ function Home() {
         <img
           className="d-block w-100"
           style={{ height: 600 }}
-          src="https://th.bing.com/th/id/OIP.LNoDWJtl7VPg7EZV5CrLCAHaFL?pid=ImgDet&rs=1"
+          src="https://i.pinimg.com/originals/7e/af/09/7eaf096445c86ea5ea9df3cd669566b3.jpg"
           alt="Third slide"
         />
 

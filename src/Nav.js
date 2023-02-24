@@ -81,7 +81,7 @@ function Nav() {
               <h1
                 style={{
                   float: "right",
-                  marginBottom: -5,
+                
                   color: "white",
                   fontSize: 25,
                   textAlign: "center",
@@ -118,7 +118,7 @@ function Nav() {
               <h1
                 style={{
                   float: "right",
-                  marginBottom: -5,
+                
                   color: "white",
                   fontSize: 25,
                   textAlign: "center",
@@ -153,7 +153,7 @@ function Nav() {
               <h1
                 style={{
                   float: "right",
-                  marginBottom: -5,
+                 
                   color: "white",
                   fontSize: 25,
                   textAlign: "center",
@@ -189,26 +189,13 @@ function Nav() {
           <img alt=" " className="logo" src={image}>
               </img>
               </Link>
-            {/* <button className="dropbtn">
-              <h1
-                style={{
-                  float: "right",
-                  marginBottom: -5,
-                  color: "white",
-                  fontSize: 25,
-                  textAlign: "center",
-                }}
-                onClick={logouts}
-              >
-                Logout
-              </h1>
-            </button> */}
+           
             &emsp;&emsp;
             <button className="dropbtn">
               <h1
                 style={{
                   float: "right",
-                  marginBottom: -5,
+                  
                   color: "white",
                   fontSize: 25,
                   textAlign: "center",
@@ -227,7 +214,7 @@ function Nav() {
               <h1
                 style={{
                   float: "right",
-                  marginBottom: -5,
+                
                   color: "white",
                   fontSize: 25,
                   textAlign: "center",
@@ -248,7 +235,7 @@ function Nav() {
                 <h1
                   style={{
                     float: "right",
-                    marginBottom: -5,
+                    
                     color: "white",
                     fontSize: 25,
                     textAlign: "center",
@@ -292,7 +279,7 @@ function Nav() {
                 <h1
                   style={{
                     float: "right",
-                    marginBottom: -5,
+                   
                     color: "white",
                     fontSize: 25,
                     textAlign: "center",
@@ -335,7 +322,7 @@ function Nav() {
                 <h1
                   style={{
                     float: "right",
-                    marginBottom: -5,
+                    
                     color: "white",
                     fontSize: 25,
                     textAlign: "center",
@@ -392,7 +379,7 @@ function Nav() {
               <h1
                 style={{
                   float: "right",
-                  marginBottom: -5,
+                 
                   color: "white",
                   fontSize: 25,
                   textAlign: "center",
